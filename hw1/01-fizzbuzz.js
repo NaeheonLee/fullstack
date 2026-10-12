@@ -35,7 +35,7 @@ Output: ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13"
  */
 
 function fizzBuzz(n) {
-  let outputArray = [];
+  const outputArray = [];
 
   // Loop from 1 up to and including n
   for (let i = 1; i <= n; i++) {
