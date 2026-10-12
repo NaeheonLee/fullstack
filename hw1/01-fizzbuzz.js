@@ -35,28 +35,28 @@ Output: ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13"
  */
 
 function fizzBuzz(n) {
-  let output_array = [];
+  let outputArray = [];
 
   // Loop from 1 up to and including n
   for (let i = 1; i <= n; i++) {
     // 1. Check if the value is divisible by both 3 and 5
     if (i % 3 === 0 && i % 5 === 0) {
-      output_array.push("FizzBuzz");
+      outputArray.push("FizzBuzz");
     }
     // 2. Check if the value is divisible by 3
     else if (i % 3 === 0) {
-      output_array.push("Fizz");
+      outputArray.push("Fizz");
     }
-    // 3. Check if the value is divisible by 3
+    // 3. Check if the value is divisible by 5
     else if (i % 5 === 0) {
-      output_array.push("Buzz");
+      outputArray.push("Buzz");
     }
     // 4. Default case
     else {
-      output_array.push(String(i));
+      outputArray.push(String(i));
     }
   }
 
   // 5. Return completed array
-  return output_array;
+  return outputArray;
 }
