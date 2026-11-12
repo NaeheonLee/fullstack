@@ -1,0 +1,97 @@
+/*
+ * GLOBAL STYLES & RESETS
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+
+/*
+ * TYPOGRAPHY
+ */
+
+h1 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+ul {
+  padding-left: 30px;
+}
+
+
+/*
+ * BOARD LAYOUT & COMPONENTS
+ */
+
+/* Clears the float used by the .square elements to keep the grid rows intact */
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+/* Styles individual game board slots */
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 68px;
+  height: 68px;
+  
+  /* Negative margins prevent double-thick borders where squares touch */
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 68px;
+}
+
+/* Provides visual feedback when navigating the board via keyboard */
+.square:focus {
+  outline: none;
+  background: #ddd;
+}
+
+
+/*
+ * GAME LAYOUT
+ */
+
+/* Uses flexbox to align the game board and the history panel side-by-side */
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+
+/*
+ * GAME STATES
+ */
+
+/* Conditionally applied by React to highlight the squares that form a winning line */
+.square.winning {
+  background-color: #ffeb3b; 
+}
